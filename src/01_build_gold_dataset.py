@@ -25,7 +25,7 @@ BASE_DIR = (
 )
 
 YAML_CONFIG_PATH = BASE_DIR / "stations.yaml"
-SINCA_DIR = BASE_DIR / "Datos Sinca"
+SINCA_DIR = BASE_DIR / "Data_Sinca"
 RAW_WEATHER_DIR = BASE_DIR / "data" / "raw" / "weather"
 RAW_FORECAST_DIR = BASE_DIR / "data" / "raw" / "forecast"
 PROCESSED_DIR = BASE_DIR / "data" / "processed"
