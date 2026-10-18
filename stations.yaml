@@ -1,0 +1,32 @@
+stations:
+  - id: "aysen"
+    name: "Coyhaique / Aysén"
+    city: "Aysén"
+    latitude: -45.4050
+    longitude: -72.6917
+    timezone: "America/Aysen_Dynamic"  # Transición histórica 06-abr-2025
+    filename: "m25_aysen.csv"
+
+  - id: "valdivia"
+    name: "Valdivia 2"
+    city: "Valdivia"
+    latitude: -39.8142
+    longitude: -73.2459
+    timezone: "America/Santiago"
+    filename: "m25_valdivia.csv"
+
+  - id: "temuco"
+    name: "Las Encinas"
+    city: "Temuco"
+    latitude: -38.7359
+    longitude: -72.5904
+    timezone: "America/Santiago"
+    filename: "m25_temuco.csv"
+
+  - id: "santiago"
+    name: "Parque O'Higgins"
+    city: "Santiago"
+    latitude: -33.4569
+    longitude: -70.6622
+    timezone: "America/Santiago"
+    filename: "m25_santiago.csv"
