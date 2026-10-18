@@ -55,7 +55,7 @@ An alert means the next-day 24-hour mean $PM_{2.5}$ is at or above $50\ \mu\text
 * **Choices made on the same data:** The model family, the $\approx 30\%$ alert budget and the Aysén threshold (80 instead of 50) were chosen after exploring alternatives on this dataset.
 * **Valdivia** uses a single training winter, and 2026 data are mostly preliminary (they may be revised by the network).
 * **Santiago** is not usable with weather forecasts alone; it likely needs thermal inversion information that these inputs do not capture.
-* **Archived vs. live forecasts:** Models are trained on archived GFS forecasts; live GFS forecasts at 24–48 h may have larger errors. Live performance has not been measured yet; the daily script keeps a prediction log for that purpose.
+* **Archived vs. live forecasts:** Models are trained on archived GFS forecasts; live GFS forecasts at 24–48 h may have larger errors. Live performance has not been measured yet in production; inference is designed as an on-demand prototype.
 * **Definition of "alert":** Here it refers to a threshold on the next-day 24-hour mean (50 or 80 $\mu\text{g/m}^3$), not necessarily an official regulatory category.
 * **Persistence is not replaced:** The model's value is early detection of onsets from weather alone. As an overall detector it is not uniformly better than persistence (for example, persistence can have higher total recall in some cities).
 
@@ -111,7 +111,7 @@ Una alerta significa que el promedio de 24 horas de $PM_{2.5}$ del día siguient
 * **Decisiones tomadas con los mismos datos:** La familia de modelo, el presupuesto de $\approx 30\%$ de alertas y el umbral de Aysén (80 en vez de 50) se eligieron después de probar alternativas sobre este conjunto.
 * **Valdivia** usa un solo invierno de entrenamiento y los datos de 2026 son en su mayoría preliminares (la red puede revisarlos).
 * **Santiago** no es utilizable solo con pronóstico meteorológico; probablemente requiere información de inversión térmica que estas variables no capturan.
-* **Pronósticos archivados vs. en vivo:** Los modelos se entrenan con pronósticos GFS archivados; los pronósticos en vivo a 24–48 h pueden tener más error. El desempeño en vivo aún no está medido; el script diario guarda un historial de predicciones para eso.
+* **Pronósticos archivados vs. en vivo:** Los modelos se entrenan con pronósticos GFS archivados; los pronósticos en vivo a 24–48 h pueden tener más error. El desempeño en vivo aún no está medido en producción; la inferencia opera como un prototipo bajo demanda.
 * **Definición de "alerta":** Aquí es un umbral sobre el promedio de 24 horas del día siguiente (50 u 80 $\mu\text{g/m}^3$), no necesariamente una categoría regulatoria oficial.
 * **No reemplaza la persistencia:** El valor del modelo es detectar inicios de episodio solo con meteorología. Como detector general no es uniformemente mejor que la persistencia (por ejemplo, la persistencia puede tener mayor recall total en algunas ciudades).
 
