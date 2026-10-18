@@ -20,6 +20,10 @@
 Using only numerical weather forecasts (no pollution sensor data as input), a simple logistic model flags high-risk winter days one day ahead. In **Temuco** and **Aysén** it is about twice as precise as alerting at random and catches roughly half of the first days of new episodes, something a persistence rule (*"alert tomorrow if today is an alert"*) cannot do by definition. **Valdivia** is a preliminary result (one training winter). **Santiago** does not work with these inputs. Uncertainty is wide: the test sets contain only 16–33 first days per city.
 
 ### 1. Results (Out-of-sample test, winter May–Aug)
+
+<p align="center">
+  <img src="assets/distribucion_pm25.png" width="92%" alt="PM2.5 Winter Distribution and Alert Frequency in Chile">
+</p>
 An alert means the next-day 24-hour mean $PM_{2.5}$ is at or above $50\ \mu\text{g/m}^3$ ($80\ \mu\text{g/m}^3$ in Aysén, where 50 is exceeded on most winter days). The model alerts on the top $\approx 30\%$ of days by risk, using a threshold fixed on the training data.
 
 | City | Test days | Base rate | AUC [95% CI] | Precision [95% CI] | Lift vs. random [95% CI] | First-day recall [95% CI] | False alarms per hit |
@@ -48,6 +52,9 @@ An alert means the next-day 24-hour mean $PM_{2.5}$ is at or above $50\ \mu\text
 * **Time zones:** Aysén's switch from `America/Santiago` to a permanent UTC−3 offset in April 2025 is handled explicitly.
 * **Midnight records:** SINCA's 00:00 entry that closes the previous day is shifted by one day.
 * **Valdivia level shift:** The $PM_{2.5}$ series changes level from April 2025 onward ($\approx 3\times$ higher winter means, while Temuco stays stable). The cause is unconfirmed. Valdivia is therefore trained only on data from that date.
+<p align="center">
+  <img src="assets/quiebre_valdivia.png" width="92%" alt="Valdivia Structural Break Diagnosis SINCA">
+</p>
 * **Forecast quality:** Mean absolute difference between the archived GFS forecast and ERA5 is 1.4–2.2 °C (temperature) and 1.8–4.5 km/h (wind) depending on the city.
 
 ### 4. Limitations
@@ -76,6 +83,9 @@ An alert means the next-day 24-hour mean $PM_{2.5}$ is at or above $50\ \mu\text
 Usando solo pronósticos meteorológicos numéricos (sin datos de contaminación como entrada), un modelo logístico simple marca con un día de anticipación los días de alto riesgo en invierno. En **Temuco** y **Aysén** es unas dos veces más preciso que alertar al azar y detecta cerca de la mitad de los primeros días de nuevos episodios, algo que una regla de persistencia (*"alerta mañana si hoy hay alerta"*) no puede hacer por definición. **Valdivia** es un resultado preliminar (un invierno de entrenamiento). **Santiago** no funciona con estas variables. La incertidumbre es amplia: el test tiene solo 16 a 33 primeros días por ciudad.
 
 ### 1. Resultados (Test fuera de muestra, invierno mayo–agosto)
+<p align="center">
+  <img src="assets/distribucion_pm25.png" width="92%" alt="PM2.5 Winter Distribution and Alert Frequency in Chile">
+</p>
 Una alerta significa que el promedio de 24 horas de $PM_{2.5}$ del día siguiente es igual o mayor a $50\ \mu\text{g/m}^3$ ($80\ \mu\text{g/m}^3$ en Aysén, donde 50 se supera la mayoría de los días de invierno). El modelo alerta el $\approx 30\%$ de los días de mayor riesgo, con un umbral fijado en los datos de entrenamiento.
 
 | Ciudad | Días de test | Tasa base | AUC [IC 95%] | Precisión [IC 95%] | Lift vs. azar [IC 95%] | Recall del primer día [IC 95%] | Falsas alarmas por acierto |
@@ -104,6 +114,9 @@ Una alerta significa que el promedio de 24 horas de $PM_{2.5}$ del día siguient
 * **Zonas horarias:** Se maneja explícitamente el cambio de Aysén desde `America/Santiago` a un desfase permanente UTC−3 en abril de 2025.
 * **Registros de medianoche:** La hora 00:00 de SINCA que cierra el día anterior se desplaza un día.
 * **Cambio de nivel en Valdivia:** La serie de $PM_{2.5}$ cambia de nivel desde abril de 2025 (promedios de invierno unas 3 veces mayores, mientras Temuco se mantiene estable). La causa no está confirmada. Por eso Valdivia se entrena solo con datos desde esa fecha.
+<p align="center">
+  <img src="assets/quiebre_valdivia.png" width="92%" alt="Valdivia Structural Break Diagnosis SINCA">
+</p>
 * **Calidad del pronóstico:** La diferencia absoluta media entre el pronóstico GFS archivado y ERA5 es de 1.4–2.2 °C (temperatura) y 1.8–4.5 km/h (viento), según la ciudad.
 
 ### 4. Limitaciones
