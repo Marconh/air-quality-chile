@@ -1,0 +1,5 @@
+fecha_ejecucion,ciudad,fecha_predicha,target_umbral,probabilidad,umbral_operativo,alerta_emitida,temp_min_manana_C,viento_medio_manana_kmh,delta_temp_noche_C,delta_viento_noche_kmh,modelo_usado
+2026-10-18 15:54,Aysén,2026-10-19,≥80 µg/m³,0.309,0.692,NO,6.5,3.3,1.25,2.4,alert_model_aysen_v2.joblib
+2026-10-18 15:54,Valdivia,2026-10-19,≥50 µg/m³,0.269,0.622,NO,9.5,3.5,-2.0,-0.9,alert_model_valdivia_v2.joblib
+2026-10-18 15:54,Temuco,2026-10-19,≥50 µg/m³,0.132,0.688,NO,9.7,4.7,-2.57,-4.78,alert_model_temuco_v2.joblib
+2026-10-18 15:54,Santiago,2026-10-19,≥50 µg/m³,0.186,0.583,NO,14.6,6.9,0.52,-0.37,alert_model_santiago_v2.joblib
