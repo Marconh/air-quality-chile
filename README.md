@@ -68,7 +68,7 @@ An alert means the next-day 24-hour mean $PM_{2.5}$ is at or above $50\ \mu\text
 
 ### 5. Reproduce
 1. Install dependencies: `pip install -r requirements.txt`.
-2. Place the SINCA $PM_{2.5}$ CSV exports in `Datos Sinca/` and configure `stations.yaml`.
+2. Place the SINCA $PM_{2.5}$ CSV exports in `Data_Sinca/` and configure `stations.yaml`.
 3. Run the ETL: `python src/01_build_gold_dataset.py`.
 4. Run the benchmark evaluation: `python src/02_evaluate_benchmark.py` (or execute the notebook).
 5. Train production models: `python src/03_train_production_models.py`.
@@ -130,7 +130,7 @@ Una alerta significa que el promedio de 24 horas de $PM_{2.5}$ del día siguient
 
 ### 5. Reproducir
 1. Instalar dependencias: `pip install -r requirements.txt`.
-2. Colocar los CSV de $PM_{2.5}$ de SINCA en `Datos Sinca/` y configurar `stations.yaml`.
+2. Colocar los CSV de $PM_{2.5}$ de SINCA en `Data_Sinca/` y configurar `stations.yaml`.
 3. Ejecutar el ETL: `python src/01_build_gold_dataset.py`.
 4. Ejecutar la evaluación del benchmark: `python src/02_evaluate_benchmark.py` (o ejecutar el notebook).
 5. Entrenar modelos de producción: `python src/03_train_production_models.py`.
