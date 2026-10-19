@@ -24,7 +24,7 @@ Using only numerical weather forecasts (no pollution sensor data as input), a si
 <p align="center">
   <img src="assets/distribucion_pm25.png" width="92%" alt="PM2.5 Winter Distribution and Alert Frequency in Chile">
 </p>
-An alert means the next-day 24-hour mean $PM_{2.5}$ is at or above $50\ \mu\text{g/m}^3$ ($80\ \mu\text{g/m}^3$ in Aysén, where 50 is exceeded on most winter days). The model alerts on the top $\approx 30\%$ of days by risk, using a threshold fixed on the training data.
+An alert means the next-day 24-hour mean PM2.5 is at or above 50 µg/m³ (80 µg/m³ in Aysén, where 50 is exceeded on most winter days). The model alerts on the top ~30% of days by risk, using a threshold fixed on the training data.
 
 | City | Test days | Base rate | AUC [95% CI] | Precision [95% CI] | Lift vs. random [95% CI] | First-day recall [95% CI] | False alarms per hit |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
@@ -86,7 +86,7 @@ Usando solo pronósticos meteorológicos numéricos (sin datos de contaminación
 <p align="center">
   <img src="assets/distribucion_pm25.png" width="92%" alt="PM2.5 Winter Distribution and Alert Frequency in Chile">
 </p>
-Una alerta significa que el promedio de 24 horas de $PM_{2.5}$ del día siguiente es igual o mayor a $50\ \mu\text{g/m}^3$ ($80\ \mu\text{g/m}^3$ en Aysén, donde 50 se supera la mayoría de los días de invierno). El modelo alerta el $\approx 30\%$ de los días de mayor riesgo, con un umbral fijado en los datos de entrenamiento.
+Una alerta significa que el promedio de 24 horas de PM2.5 del día siguiente es igual o mayor a 50 µg/m³ (80 µg/m³ en Aysén, donde 50 se supera la mayoría de los días de invierno). El modelo emite alertas en el ~30% de los días con mayor riesgo, usando un umbral calibrado sobre los datos de entrenamiento.
 
 | Ciudad | Días de test | Tasa base | AUC [IC 95%] | Precisión [IC 95%] | Lift vs. azar [IC 95%] | Recall del primer día [IC 95%] | Falsas alarmas por acierto |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
